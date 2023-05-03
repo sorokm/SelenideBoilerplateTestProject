@@ -1,12 +1,20 @@
 package app;
 
-import app.pages.LoginPage;
+import app.pages.habr.*;
 
 public class App {
 
-    public LoginPage loginPage;
+    public MainPage mainPage;
+    public BookmarksPage bookmarksPage;
+    public ProfilePage profilePage;
+    public SearchPage searchPage;
+    public SettingsPage settingsPage;
 
     public App() {
-        loginPage = PageBuilder.buildLoginPage();
+        mainPage = PageBuilder.buildLoginPage();
+        bookmarksPage = PageBuilder.buildBookmarksPage();
+        profilePage = PageBuilder.buildProfilePage();
+        searchPage = PageBuilder.buildSearchPage();
+        settingsPage = PageBuilder.buildSettingsPage();
     }
 }

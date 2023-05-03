@@ -3,12 +3,10 @@ import helpers.Driver;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
-class A_BaseTest {
+class BaseTest {
 
     protected App app;
     protected SoftAssert softAssert;
@@ -18,7 +16,6 @@ class A_BaseTest {
     public void setUp() {
 
         Driver.initDriver();
-
         app = new App();
         softAssert = new SoftAssert();
 
