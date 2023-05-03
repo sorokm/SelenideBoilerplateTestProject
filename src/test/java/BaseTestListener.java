@@ -2,8 +2,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class A_BaseTestListener implements ITestListener {
-
+public class BaseTestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult TestResult) {
@@ -16,8 +15,7 @@ public class A_BaseTestListener implements ITestListener {
     }
 
     @Override
-    public void onTestFailure(ITestResult TestResult)
-    {
+    public void onTestFailure(ITestResult TestResult) {
 
     }
 

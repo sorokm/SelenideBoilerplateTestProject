@@ -1,18 +1,18 @@
 package app.pages;
+
 import app.AppConfig;
 import com.codeborne.selenide.Selenide;
-import helpers.Trim;
+import helpers.Driver;
 
 public abstract class BasePage {
 
-    protected String pageUrl;
-
-    public BasePage(String pageUrl) {
-        this.pageUrl = pageUrl;
+    public BasePage() {
     }
 
     public void open() {
-        String url = Trim.rtrim(AppConfig.baseUrl, "/") + "/" + Trim.ltrim(pageUrl, "/");
+        String url = AppConfig.baseUrl;
         Selenide.open(url);
+        Driver.maximize();
+        Driver.setImplicitWait(10);
     }
 }
